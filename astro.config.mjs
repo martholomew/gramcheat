@@ -7,9 +7,9 @@ export default defineConfig({
 	base: 'gramcheat',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Grammar Cheatsheets',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/martholomew/gramcheat',
 			},
 			sidebar: [
 				{
