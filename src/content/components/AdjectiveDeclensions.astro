@@ -1,0 +1,127 @@
+---
+
+const {json, word, word2, word3, word4, word5, word6} = Astro.props;
+
+let words = []
+
+word ? words.push(word) : false;
+word2 ? words.push(word2) : false;
+word3 ? words.push(word3) : false; 
+word4 ? words.push(word4) : false;
+word5 ? words.push(word5) : false;
+word6 ? words.push(word6) : false;
+
+let decls = []
+for (let word of words) {
+	for (let declension of json) {
+		if (declension.key === word) {
+			decls.push(declension)
+		}
+	}
+}
+---
+
+<table>
+	{word2 ? <tr><th></th>{decls.map((decl) => (
+		<th>{decl.key}</th>
+	))}</tr> : false}
+    <tr>
+        <th></th>
+        <th colspan="2">masc</th>
+        <th></th>
+        <th colspan="2">fem</th>
+        <th></th>
+        <th colspan="2">neut</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th>sing</th>
+        <th>plur</th>
+        <th></th>
+        <th>sing</th>
+        <th>plur</th>
+        <th></th>
+        <th>sing</th>
+        <th>plur</th>
+    </tr>
+	<tr>
+		<th>nom</th>
+		{decls.map((decl) => (
+			<td>{decl.m_s_nom}</td>
+            <td>{decl.m_p_nom}</td>
+            <td></td>
+            <td>{decl.f_s_nom}</td>
+            <td>{decl.f_p_nom}</td>
+            <td></td>
+            <td>{decl.n_s_nom}</td>
+            <td>{decl.n_p_nom}</td>
+		))}
+	</tr>
+	<tr>
+		<th>acc</th>
+		{decls.map((decl) => (
+			<td>{decl.m_s_acc}</td>
+            <td>{decl.m_p_acc}</td>
+            <td></td>
+            <td>{decl.f_s_acc}</td>
+            <td>{decl.f_p_acc}</td>
+            <td></td>
+            <td>{decl.n_s_acc}</td>
+            <td>{decl.n_p_acc}</td>
+		))}
+	</tr>
+	<tr>
+		<th>gen</th>
+		{decls.map((decl) => (
+			<td>{decl.m_s_gen}</td>
+            <td>{decl.m_p_gen}</td>
+            <td></td>
+            <td>{decl.f_s_gen}</td>
+            <td>{decl.f_p_gen}</td>
+            <td></td>
+            <td>{decl.n_s_gen}</td>
+            <td>{decl.n_p_gen}</td>
+		))}
+	</tr>
+	<tr>
+		<th>dat</th>
+		{decls.map((decl) => (
+			<td>{decl.m_s_dat}</td>
+            <td>{decl.m_p_dat}</td>
+            <td></td>
+            <td>{decl.f_s_dat}</td>
+            <td>{decl.f_p_dat}</td>
+            <td></td>
+            <td>{decl.n_s_dat}</td>
+            <td>{decl.n_p_dat}</td>
+		))}
+	</tr>
+	<tr>
+		<th>abl</th>
+		{decls.map((decl) => (
+			<td>{decl.m_s_abl}</td>
+            <td>{decl.m_p_abl}</td>
+            <td></td>
+            <td>{decl.f_s_abl}</td>
+            <td>{decl.f_p_abl}</td>
+            <td></td>
+            <td>{decl.n_s_abl}</td>
+            <td>{decl.n_p_abl}</td>
+		))}
+	</tr>
+	
+	{decls.map((decl) => (
+        decl.s_voc ?
+    <tr>
+		<th>voc</th>
+            <td>{decl.m_s_voc}</td>
+            <td>{decl.m_p_voc}</td>
+            <td></td>
+            <td>{decl.f_s_voc}</td>
+            <td>{decl.f_p_voc}</td>
+            <td></td>
+            <td>{decl.n_s_voc}</td>
+            <td>{decl.n_p_voc}</td>
+	</tr>
+        : false))}
+</table>

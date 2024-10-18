@@ -1,0 +1,711 @@
+---
+title: Latin Verbs
+description: Latin verb reference
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import Conjugations from './../../components/Conjugations.astro';
+import NonFiniteConjugations from './../../components/NonFiniteConjugations.astro';
+import Details from './../../components/Details.astro';
+import json from "../../../data/lat_verbs.json"
+
+## Endings
+
+The secondary endings are only used in the perfect indicative.
+
+|  |  | primary | secondary | passive |
+| - | - | - | - | - |
+| **s** | **1** | -m / -o* | -i | -r |
+|  | **2** | -s | -isti | -ris / -re |
+|  | **3** | -t | -it | -tur |
+| **p** | **1** | -mus |  -imus | -mur |
+|  | **2** | -tis | -istis | -mini |
+|  | **3** | -nt | -erunt / -ere | -ntur |
+
+\**only used in the indicative mood in the present, future, and future perfect tenses of certain classes*
+
+## Verb Formation
+
+"<u>\*</u>" indicates a different first-person singular form
+
+"<u>\*\*</u>" indicates a different second-person singular form
+
+The "theme" category marking the "theme vowel" of a verb is not necessarily accurate, especially when it has subsumed/been subsumed by the affix.
+
+### Indicative (active)
+
+<Tabs>
+  <TabItem label="present">
+	present stem + theme vowel + primary endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- (-)* | -- | primary (-o)* |
+		| 2nd | present | -e- | -- | primary (-o)* |
+		| 3rd | present | -i- (-)* | -- | primary (-o)* |
+		| 3rd (io) | present | -i- | -- | primary (-o)* |
+		| 4th | present | -i- | -- | primary (-o)* |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present active indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future">
+	present stem + theme vowel + affix (bi/b/--) + primary endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- | -bi- (-b-)* | primary (-o)* |
+		| 2nd | present | -e- | -bi- (-b-)* | primary (-o)* |
+		| 3rd | present | -e- (-a-)* | -- | primary |
+		| 3rd (io) | present | -ie- (-ia-)* | -- | primary |
+		| 4th | present | -ie- (-ia-)* | -- | primary |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future active indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="imperfect">
+	present stem + theme vowel + affix (ba) + primary endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- | -ba- | primary |
+		| 2nd | present | -e- | -ba- | primary |
+		| 3rd | present | -e- | -ba- | primary |
+		| 3rd (io) | present | -ie- | -ba- | primary |
+		| 4th | present | -ie- | -ba- | primary |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="imperfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="imperfect active indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="perfect">
+	perfect stem + secondary endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="perfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="perfect active indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="pluperfect">
+	perfect stem + affix (era) + primary endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="pluperfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="pluperfect active indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future&nbsp;perfect">
+	perfect stem + affix (eri/er) + primary endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| all | perfect | -- | -eri- (-er-)* | primary (-o)* |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future perfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future perfect active indicative"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Indicative (passive / deponent)
+
+<Tabs>
+  <TabItem label="present">
+	present stem + theme vowel + passive endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- (-)* | -- (-o-)* | passive |
+		| 2nd | present | -e- | -- (-o-)* | passive |
+		| 3rd | present | -e- (-)* (-e-)** | -- (-o-)* | passive |
+		| 3rd (io) | present | -i- (-e-)** | -- (-o-)* | passive |
+		| 4th | present | -i- | -- (-o-)* | passive |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="present active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present passive indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future">
+	present stem + theme vowel + affix (bi/bo/be/--) + passive endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- | -bi- (-bo-)* (-be-)** | passive |
+		| 2nd | present | -e- | -bi- (-bo-)* (-be-)** | passive |
+		| 3rd | present | -e- (-a-)* | -- | passive |
+		| 3rd (io) | present | -ie- (-ia-)* | -- | passive |
+		| 4th | present | -ie- (-ia-)* | -- | passive |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="future active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future passive indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="imperfect">
+	present stem + theme vowel + affix (ba) + passive endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -a- | -ba- | passive |
+		| 2nd | present | -e- | -ba- | passive |
+		| 3rd | present | -e- | -ba- | passive |
+		| 3rd (io) | present | -ie- | -ba- | passive |
+		| 4th | present | -ie- | -ba- | passive |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="imperfect passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="imperfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="imperfect passive indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="perfect">
+	participle + present active indicative of sum
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="perfect passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="perfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="perfect passive indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="pluperfect">
+	participle + imperfect active indicative of sum
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="pluperfect passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="pluperfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="pluperfect passive indicative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future&nbsp;perfect">
+	participle + future active indicative of sum
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future perfect passive indicative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="future perfect active indicative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future perfect passive indicative"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Subjunctive (active)
+
+<Tabs>
+  <TabItem label="present">
+	present stem + theme vowel + primary endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -e- | -- | primary |
+		| 2nd | present | -ea- | -- | primary |
+		| 3rd | present | -a- | -- | primary |
+		| 3rd (io) | present | -ia- | -- | primary |
+		| 4th | present | -ia- | -- | primary |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present active subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="imperfect">
+	infinitive + primary endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="imperfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="imperfect active subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="perfect">
+	perfect stem + affix (eri) + primary endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="perfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="perfect active subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="pluperfect">
+	perfect infinitive + primary endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="pluperfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="pluperfect active subjunctive"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Subjunctive (passive / deponent)
+
+<Tabs>
+  <TabItem label="present">
+	present stem + theme vowel + passive endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -e- | -- | passive |
+		| 2nd | present | -ea- | -- | passive |
+		| 3rd | present | -a- | -- | passive |
+		| 3rd (io) | present | -ia- | -- | passive |
+		| 4th | present | -ia- | -- | passive |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present passive subjunctive"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="present active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present passive subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="imperfect">
+	infinitive + passive endings
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="imperfect passive subjunctive"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="imperfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="imperfect passive subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="perfect">
+	participle + present active subjunctive of sum
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="perfect passive subjunctive"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="perfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="perfect passive subjunctive"/>
+	</Details>
+  </TabItem>
+  <TabItem label="pluperfect" open="true">
+	participle + imperfect active subjunctive of sum
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="pluperfect passive subjunctive"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="pluperfect active subjunctive"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="pluperfect passive subjunctive"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Imperative (active)
+
+<Tabs>
+  <TabItem label="present">
+	present stem + theme vowel + imperative endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -ā- | -- | imperative |
+		| 2nd | present | -ē- | -- | imperative |
+		| 3rd | present | -e- | -- | imperative |
+		| 3rd (io) | present | -e- | -- | imperative |
+		| 4th | present | -ī- | -- | imperative |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present active imperative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present active imperative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future">
+	present stem + theme vowel + affix (tō) + imperative endings
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -ā- | -tō- | imperative |
+		| 2nd | present | -ē- | -tō- | imperative |
+		| 3rd | present | -i- | -tō- | imperative |
+		| 3rd (io) | present | -i- | -tō- | imperative |
+		| 4th | present | -ī- | -tō- | imperative |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future active imperative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future active imperative"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Imperative (passive / deponent)
+
+<Tabs>
+  <TabItem label="passive">
+	2nd sing: same as present active infinitive
+	
+	2nd plur: same as 2nd plur present passive indicative
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="present passive imperative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="present active imperative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="present passive imperative"/>
+	</Details>
+  </TabItem>
+  <TabItem label="future">
+	present stem + theme vowel + endings (tor/ntor)
+	<Details summary="details">
+		| class | stem | theme | affix | endings |
+		| - | - | :-: | :-: | - |
+		| 1st | present | -ā- | -- | -tor / -ntor |
+		| 2nd | present | -ē- | -- | -tor / -ntor |
+		| 3rd | present | -i- | -- | -tor / -ntor |
+		| 3rd (io) | present | -i- | -- | -tor / -ntor |
+		| 4th | present | -ī- | -- | -tor / -ntor |
+	</Details>
+	<Details summary="examples" open="true">
+		<Conjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="future passive imperative"/>
+	</Details>
+	<Details summary="examples (deponent)">
+		<Conjugations json={json} word="hortor" word2="fateor" word3="sequor" word4="patior" word5="mōlior" inflection="future active imperative"/>
+	</Details>
+	<Details summary="examples (irregular)">
+		<Conjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="future passive imperative"/>
+	</Details>
+  </TabItem>
+</Tabs>
+
+### Infinitives (active)
+
+<Tabs>
+	<TabItem label="present">
+		present stem + theme vowel + ending (re)
+		<Details summary="details">
+			| class | stem | theme | affix | endings |
+			| - | - | :-: | :-: | - |
+			| 1st | present | -ā- | -- | -re |
+			| 2nd | present | -ē- | -- | -re |
+			| 3rd | present | -e- | -- | -re |
+			| 3rd (io) | present | -e- | -- | -re |
+			| 4th | present | -ī- | -- | -re |
+		</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="present_active"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="infinitives" specific_inflection="present_active"/>
+		</Details>
+	</TabItem>
+	<TabItem label="future">
+		future participle + present active inifinitive of sum (esse)
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="future_active"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="sum" word2="eō" inflection="infinitives" specific_inflection="future_active"/>
+		</Details>
+	</TabItem>
+	<TabItem label="perfect">
+		perfect stem + ending (sse)
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="perfect_active"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="sum" word2="possum" word3="volō" word4="nōlō" word5="mālō" word6="eō" inflection="infinitives" specific_inflection="perfect_active"/>
+		</Details>
+	</TabItem>
+</Tabs>
+
+### Infinitives (passive)
+
+<Tabs>
+	<TabItem label="present">
+		present stem + theme vowel + ending (ri)
+		<Details summary="details">
+			| class | stem | theme | affix | endings |
+			| - | - | :-: | :-: | - |
+			| 1st | present | -ā- | -- | -ri |
+			| 2nd | present | -ē- | -- | -ri |
+			| 3rd | present | -e- | -- | -ri |
+			| 3rd (io) | present | -e- | -- | -ri|
+			| 4th | present | -ī- | -- | -ri |
+		</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="present_passive"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="eō" inflection="infinitives" specific_inflection="present_passive"/>
+		</Details>
+	</TabItem>
+	<TabItem label="future">
+		past participle + present passive infinitive of eō (īrī)
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="future_passive"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="eō" inflection="infinitives" specific_inflection="future_passive"/>
+		</Details>
+	</TabItem>
+	<TabItem label="perfect">
+		past participle + present active inifinitive of sum (esse)
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="infinitives" specific_inflection="perfect_passive"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="eō" inflection="infinitives" specific_inflection="perfect_passive"/>
+		</Details>
+	</TabItem>
+</Tabs>
+
+
+### Participles
+
+<Tabs>
+	<TabItem label="present">
+		present stem + theme vowel + ending (ns)
+		<Details summary="details">
+			| class | stem | theme | affix | endings |
+			| - | - | :-: | :-: | - |
+			| 1st | present | -ā- | -- | -ns |
+			| 2nd | present | -ē- | -- | -ns |
+			| 3rd | present | -ē- | -- | -ns |
+			| 3rd (io) | present | -ē- | -- | -ns |
+			| 4th | present | -ē- | -- | -ns |
+		</Details>
+	<Details summary="declension">
+		<Tabs>
+			<TabItem label="masc / fem">
+				| | sing | plur |
+				| - | - | - |
+				| nom | -ns | -ntes |
+				| acc | -ntem | -ntes |
+				| gen | -ntis | -ntium |
+				| dat | -nti | -ntibus |
+				| abl | -nti | -ntibus |
+			</TabItem>
+			<TabItem label="neut">
+				| | sing | plur |
+				| - | - | - |
+				| nom | -ns | -ntia |
+				| acc | -ns | -ntia |
+				| gen | -ntis | -ntium |
+				| dat | -nti | -ntibus |
+				| abl | -nti | -ntibus |
+			</TabItem>
+		</Tabs>
+	</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="participles" specific_inflection="present_active" tag="nom"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="possum" word2="volō" word3="nōlō" word4="mālō" word5="eō" inflection="participles" specific_inflection="present_active" tag="nom"/>
+		</Details>
+	</TabItem>
+	<TabItem label="future">
+	supine stem + ending (tūrus)
+		<Details summary="declension">
+			<Tabs>
+				<TabItem label="masc">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -us | -i |
+					| acc | -um | -os |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+				<TabItem label="fem">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -a | -e |
+					| acc | -am | -as |
+					| gen | -e | -arum |
+					| dat | -e | -is |
+					| abl | -a | -is |
+				</TabItem>
+				<TabItem label="neut">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -um | -a |
+					| acc | -um | -a |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+			</Tabs>
+		</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="participles" specific_inflection="future_active" tag="nom"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="sum" word2="eō" inflection="participles" specific_inflection="future_active"/>
+		</Details>
+	</TabItem>
+	<TabItem label="perfect (passive)">
+		supine stem + ending (us)
+		<Details summary="declension">
+			<Tabs>
+				<TabItem label="masc">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -us | -i |
+					| acc | -um | -os |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+				<TabItem label="fem">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -a | -e |
+					| acc | -am | -as |
+					| gen | -e | -arum |
+					| dat | -e | -is |
+					| abl | -a | -is |
+				</TabItem>
+				<TabItem label="neut">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -um | -a |
+					| acc | -um | -a |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+			</Tabs>
+		</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="participles" specific_inflection="perfect_passive" tag="nom"/>
+		</Details>
+		<Details summary="examples (irregular)">
+			<NonFiniteConjugations json={json} word="eō" inflection="participles" specific_inflection="perfect_passive"/>
+		</Details>
+	</TabItem>
+</Tabs>
+
+### Gerunds
+<Tabs>
+	<TabItem label="gerund">
+		present stem + theme vowel + ending (ndum)
+		<Details summary="details">
+			| class | stem | theme | affix | endings |
+			| - | - | :-: | :-: | - |
+			| 1st | present | -a- | -- | -ndum |
+			| 2nd | present | -e- | -- | -ndum |
+			| 3rd | present | -e- | -- | -ndum |
+			| 3rd (io) | present | -e- | -- | -ndum |
+			| 4th | present | -e- | -- | -ndum |
+		</Details>
+		<Details summary="declension">
+			| | sing |
+			| - | - |
+			| acc | -um |
+			| gen | -i |
+			| dat | -o |
+			| abl | -o |
+		</Details>
+		<Details summary="examples" open="true">
+			<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="gerund" specific_inflection="accusative" tag="acc"/>
+		</Details>
+	</TabItem>
+	<TabItem label="gerundive (passive)">
+		present stem + theme vowel + ending (ndus)
+		<Details summary="details">
+			| class | stem | theme | affix | endings |
+			| - | - | :-: | :-: | - |
+			| 1st | present | -a- | -- | -ndus |
+			| 2nd | present | -e- | -- | -ndus |
+			| 3rd | present | -e- | -- | -ndus |
+			| 3rd (io) | present | -e- | -- | -ndus |
+			| 4th | present | -e- | -- | -ndus |
+		</Details>
+		<Details summary="declension">
+			<Tabs>
+				<TabItem label="masc">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -us | -i |
+					| acc | -um | -os |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+				<TabItem label="fem">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -a | -e |
+					| acc | -am | -as |
+					| gen | -e | -arum |
+					| dat | -e | -is |
+					| abl | -a | -is |
+				</TabItem>
+				<TabItem label="neut">
+					| | sing | plur |
+					| - | - | - |
+					| nom | -um | -a |
+					| acc | -um | -a |
+					| gen | -i | -orum |
+					| dat | -o | -is |
+					| abl | -o | -is |
+				</TabItem>
+			</Tabs>
+		</Details>
+	</TabItem>
+</Tabs>
+
+### Supine
+
+	supine stem + ending (um)
+	<Details summary="declension">
+		| | sing |
+		| - | - |
+		| acc | -um |
+		| abl | -ū |
+	</Details>
+	<Details summary="examples" open="true">
+		<NonFiniteConjugations json={json} word="laudō" word2="moneō" word3="agō" word4="capiō" word5="audiō" inflection="supine" specific_inflection="accusative" tag="acc"/>
+	</Details>

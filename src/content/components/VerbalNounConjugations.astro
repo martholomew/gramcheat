@@ -1,0 +1,52 @@
+---
+
+const {json, word, word2, word3, word4, word5, word6, inflection, tag} = Astro.props;
+
+let words = []
+
+word ? words.push(word) : false;
+word2 ? words.push(word2) : false;
+word3 ? words.push(word3) : false;
+word4 ? words.push(word4) : false;
+word5 ? words.push(word5) : false;
+word6 ? words.push(word6) : false;
+
+let conjs = []
+for (let word of words) {
+	for (let conjugation of json) {
+		if (conjugation.word === word && conjugation.inflection === inflection) {
+			conjs.push(conjugation)
+		}
+	}
+}
+---
+
+<table>
+	{word ? <tr><th></th>{conjs.map((conj) => (
+		<th>{conj.word}</th>
+	))}</tr> : false}
+	<tr>
+		<th>acc</th>
+		{conjs.map((conj) => (
+			<td>{conj.accusative}</td>
+		))}
+	</tr>
+	<tr>
+		<th>gen</th>
+		{conjs.map((conj) => (
+			<td>{conj.genitive}</td>
+		))}
+	</tr>
+	<tr>
+		<th>dat</th>
+		{conjs.map((conj) => (
+			<td>{conj.dative}</td>
+		))}
+	</tr>
+	<tr>
+		<th>abl</th>
+		{conjs.map((conj) => (
+			<td>{conj.ablative}</td>
+		))}
+	</tr>
+</table>

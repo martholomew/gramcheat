@@ -1,0 +1,78 @@
+---
+
+const {json, word, word2, word3, word4, word5, word6} = Astro.props;
+
+let words = []
+
+word ? words.push(word) : false;
+word2 ? words.push(word2) : false;
+word3 ? words.push(word3) : false; 
+word4 ? words.push(word4) : false;
+word5 ? words.push(word5) : false;
+word6 ? words.push(word6) : false;
+
+let decls = []
+for (let word of words) {
+	for (let declension of json) {
+		if (declension.key === word) {
+			decls.push(declension)
+		}
+	}
+}
+const pernums = ['s_nom', 's_acc', 's_gen', 's_dat', 's_abl', 's_voc']
+---
+
+<table>
+	{word2 ? <tr><th></th>{decls.map((decl) => (
+		<th>{decl.key}</th>
+	))}</tr> : false}
+    <tr>
+        <th></th>
+        <th>sing</th>
+        <th>plur</th>
+    </tr>
+	<tr>
+		<th>nom</th>
+		{decls.map((decl) => (
+			<td>{decl.s_nom}</td>
+            <td>{decl.p_nom}</td>
+		))}
+	</tr>
+	<tr>
+		<th>acc</th>
+		{decls.map((decl) => (
+			<td>{decl.s_acc}</td>
+            <td>{decl.p_acc}</td>
+		))}
+	</tr>
+	<tr>
+		<th>gen</th>
+		{decls.map((decl) => (
+			<td>{decl.s_gen}</td>
+            <td>{decl.p_gen}</td>
+		))}
+	</tr>
+	<tr>
+		<th>dat</th>
+		{decls.map((decl) => (
+			<td>{decl.s_dat}</td>
+            <td>{decl.p_dat}</td>
+		))}
+	</tr>
+	<tr>
+		<th>abl</th>
+		{decls.map((decl) => (
+			<td>{decl.s_abl}</td>
+            <td>{decl.p_abl}</td>
+		))}
+	</tr>
+	
+	{decls.map((decl) => (
+        decl.s_voc ?
+    <tr>
+		<th>voc</th>
+			<td>{decl.s_voc}</td>
+            <td>{decl.p_voc}</td>
+	</tr>
+        : false))}
+</table>

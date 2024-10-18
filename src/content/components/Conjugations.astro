@@ -1,0 +1,72 @@
+---
+import conjugations from "../../data/lat_verbs.json"
+
+const {word, word2, word3, word4, word5, word6, inflection} = Astro.props;
+
+let words = []
+
+word ? words.push(word) : false;
+word2 ? words.push(word2) : false;
+word3 ? words.push(word3) : false;
+word4 ? words.push(word4) : false;
+word5 ? words.push(word5) : false;
+word6 ? words.push(word6) : false;
+
+let conjs = []
+for (let word of words) {
+	for (let conjugation of conjugations) {
+		if (conjugation.word === word && conjugation.inflection === inflection) {
+			conjs.push(conjugation)
+		}
+	}
+}
+const pernums = ['s1', 's2', 's3', 'p1', 'p2', 'p3']
+---
+
+<table>
+	{word2 ? <tr><th></th><th></th>{conjs.map((conj) => (
+		<th>{conj.word}</th>
+	))}</tr> : false}
+	<tr>
+		<th>s</th>
+		<th>1</th>
+		{conjs.map((conj) => (
+			<td>{conj.s1}</td>
+		))}
+	</tr>
+	<tr>
+		<th></th>
+		<th>2</th>
+		{conjs.map((conj) => (
+			<td>{conj.s2}</td>
+		))}
+	</tr>
+	<tr>
+		<th></th>
+		<th>3</th>
+		{conjs.map((conj) => (
+			<td>{conj.s3}</td>
+		))}
+	</tr>
+	<tr>
+		<th>p</th>
+		<th>1</th>
+		{conjs.map((conj) => (
+			<td>{conj.p1}</td>
+		))}
+	</tr>
+	<tr>
+		<th></th>
+		<th>2</th>
+		{conjs.map((conj) => (
+			<td>{conj.p2}</td>
+		))}
+	</tr>
+	<tr>
+		<th></th>
+		<th>3</th>
+		{conjs.map((conj) => (
+			<td>{conj.p3}</td>
+		))}
+	</tr>
+</table>

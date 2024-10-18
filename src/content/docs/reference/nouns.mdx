@@ -1,0 +1,71 @@
+---
+title: Latin Nouns
+description: Latin noun reference
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import Declensions from './../../components/Declensions.astro';
+import Details from './../../components/Details.astro';
+import json from "../../../data/lat_nouns.json"
+
+## Noun Formation
+
+
+<Tabs>
+    <TabItem label="1st">
+        <Tabs>
+            <TabItem label="fem">
+                <Declensions json={json} word="rosa"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="2nd">
+        <Tabs>
+            <TabItem label="masc">
+                <Declensions json={json} word="dominus"/>
+            </TabItem>
+            <TabItem label="masc (irr)">
+                <Declensions json={json} word="deus"/>
+            </TabItem>
+            <TabItem label="neut">
+                <Declensions json={json} word="templum"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="3rd">
+        <Tabs>
+            <TabItem label="masc / fem">
+                <Declensions json={json} word="civis"/>
+            </TabItem>
+            <TabItem label="neut">
+                <Declensions json={json} word="mare"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="3rd&nbsp;(cons)">
+        <Tabs>
+            <TabItem label="masc / fem">
+                <Declensions json={json} word="consul"/>
+            </TabItem>
+            <TabItem label="neut">
+                <Declensions json={json} word="corpus"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="4th">
+        <Tabs>
+            <TabItem label="masc / fem">
+                <Declensions json={json} word="manus"/>
+            </TabItem>
+            <TabItem label="neut">
+                <Declensions json={json} word="cornu"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="5th">
+        <Tabs>
+            <TabItem label="masc / fem">
+                <Declensions json={json} word="res"/>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>

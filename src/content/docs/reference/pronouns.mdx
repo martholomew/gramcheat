@@ -1,0 +1,73 @@
+---
+title: Latin Pronouns
+description: Latin pronoun reference
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import AdjectiveDeclensions from './../../components/AdjectiveDeclensions.astro';
+import Details from './../../components/Details.astro';
+import json from "../../../data/lat_adjectives.json"
+
+## Personal Pronouns
+
+<Tabs>
+    <TabItem label="1st">
+        | | sing | plur |
+        | -- | -- | -- |
+        | nom | ego | nōs |
+        | acc | mē | nōs |
+        | gen | meī | nostrum / nostrī |
+        | dat | mihī | nōbīs |
+        | abl | mē | nōbīs |
+    </TabItem>
+    <TabItem label="2nd">
+        | | sing | plur |
+        | -- | -- | -- |
+        | nom | tū | vōs |
+        | acc | tē | vōs |
+        | gen | tuī | vestrum / vestrī |
+        | dat | tibī | vōbīs |
+        | abl | tē | vōbīs |
+    </TabItem>
+    <TabItem label="3rd (reflexive)">
+        | | sing | plur |
+        | -- | -- | -- |
+        | nom | - | - |
+        | acc | sē / sēsē | sē / sēsē |
+        | gen | suī | suī |
+        | dat | sibī | sibī |
+        | abl | sē / sēsē | sē / sēsē |
+    </TabItem>
+    <TabItem label="possessive">
+        | | sing | plur |
+        | -- | -- | -- |
+        | 1st | meus | noster |
+        | 2nd | tuus | vester |
+        | 3rd | suus | suus |
+    </TabItem>
+</Tabs>
+
+## Demonstrative Pronouns
+
+<Tabs>
+    <TabItem label="is">
+        <AdjectiveDeclensions json={json} word="is"/>
+    </TabItem>
+    <TabItem label="hic">
+        <AdjectiveDeclensions json={json} word="hic"/>
+    </TabItem>
+    <TabItem label="iste">
+        <AdjectiveDeclensions json={json} word="iste"/>
+    </TabItem>
+    <TabItem label="ille">
+        <AdjectiveDeclensions json={json} word="ille"/>
+    </TabItem>
+</Tabs>
+
+
+## Relative Pronoun
+
+<AdjectiveDeclensions json={json} word="qui"/>
+
+## Interrogative Pronoun
+
+<AdjectiveDeclensions json={json} word="quis"/>

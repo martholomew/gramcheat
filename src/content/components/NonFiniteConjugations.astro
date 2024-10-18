@@ -1,0 +1,34 @@
+---
+
+const {json, word, word2, word3, word4, word5, word6, inflection, specific_inflection, tag} = Astro.props;
+
+let words = []
+
+word ? words.push(word) : false;
+word2 ? words.push(word2) : false;
+word3 ? words.push(word3) : false;
+word4 ? words.push(word4) : false;
+word5 ? words.push(word5) : false;
+word6 ? words.push(word6) : false;
+
+let conjs = []
+for (let word of words) {
+	for (let conjugation of json) {
+		if (conjugation.word === word && conjugation.inflection === inflection) {
+			conjs.push(conjugation)
+		}
+	}
+}
+---
+
+<table>
+	{word ? <tr> {tag ? <th></th> : false} {conjs.map((conj) => (
+		<th>{conj.word}</th>
+	))}</tr> : false}
+	<tr>
+		{tag ? <th>{tag}</td> : false}
+		{conjs.map((conj) => (
+			<td>{conj[specific_inflection]}</td>
+		))}
+	</tr>
+</table>

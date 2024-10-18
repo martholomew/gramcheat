@@ -1,0 +1,91 @@
+---
+title: Latin Adjectives / Adverbs
+description: Latin adjective and adverb reference
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import AdjectiveDeclensions from './../../components/AdjectiveDeclensions.astro';
+import Details from './../../components/Details.astro';
+import json from "../../../data/lat_adjectives.json"
+
+## Adjective Formation
+
+
+<Tabs>
+    <TabItem label="1st / 2nd">
+         <AdjectiveDeclensions json={json} word="bonus"/>
+    </TabItem>
+    <TabItem label="3rd">
+        <AdjectiveDeclensions json={json} word="ingēns"/>
+    </TabItem>
+    <TabItem label="3rd&nbsp;(cons)">
+        <AdjectiveDeclensions json={json} word="melior"/>
+    </TabItem>
+</Tabs>
+
+
+## Adjective Degrees
+
+<Tabs>
+    <TabItem label="comparative">
+        Uses 3rd declension (consonant) endings
+
+        masc / fem: stem + ior (nom)
+
+        neut: stem + ius (nom/acc)
+        
+
+        <Details summary="example" open="true">
+            <AdjectiveDeclensions json={json} word="melior"/>
+        </Details>
+    </TabItem>
+    <TabItem label="superlative">
+        stem + issim + 1st / 2nd declension endings
+
+        stem (ending in "r" or "er") + errim + 1st / 2nd declension endings
+
+        stem (ending in "l" or "il") + illim + 1st / 2nd declension endings
+
+        <Details summary="example" open="true">
+            <AdjectiveDeclensions json={json} word="optimus"/>
+        </Details>
+    </TabItem>
+</Tabs>
+
+
+## Adverb Degrees
+
+<Tabs>
+    <TabItem label="positive">
+        1st / 2nd stem + e
+
+        3rd stem + iter
+        
+        <Details summary="example" open="true">
+            1st / 2nd stem: pulchrior (masc nom) -> pulchre
+            
+            3rd stem: celer (masc nom) -> celeriter
+        </Details>
+    </TabItem>
+    <TabItem label="comparative">
+        stem + ius (same as singular neuter of comparative adjective)
+        
+        <Details summary="example" open="true">
+            1st / 2nd stem: pulchrior (masc nom) -> pulchrius
+        </Details>
+    </TabItem>
+    <TabItem label="superlative">
+        stem + issim + e
+
+        stem (ending in "r" or "er") + errim + e
+
+        stem (ending in "l" or "il") + illim + e
+
+        <Details summary="example" open="true">
+            tūtus (masc nom) -> tutissime
+
+            pulchrior (masc nom) -> pulcherrime
+
+            facilis (masc nom) -> facillime
+        </Details>
+    </TabItem>
+</Tabs>
